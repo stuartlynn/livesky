@@ -1,0 +1,11 @@
+development:
+  host: localhost
+  thread_safe: true
+  port: 6379
+    
+
+production:
+  host: redis.zooniverse.org
+  password: 6XlvB1HTJZJsEBRCIvri
+  port: 6379
+  db: 1
