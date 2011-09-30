@@ -9,7 +9,6 @@ class LiveSocket < Cramp::Action
   def create_redis
     redis_details = YAML.load_file( 'config/redis.yml')
     redis_details = redis_details['production']
-    puts "#{redis_details}"
     @sub = EM::Hiredis.connect("redis://:#{redis_details['password']}@#{redis_details["host"]}:#{redis_details["port"]}/#{redis_details["db"]}")
     subscribe
   end
